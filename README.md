@@ -172,3 +172,19 @@ router.run('collections/1/items/2?limit=10');
 //     limit: 10
 // }
 ```
+
+## Module support
+
+### Node
+
+```javascript
+var PathParser = require('./pathparser.js');
+var router = new PathParser;
+```
+
+### Mozilla JSM
+
+```javascript
+Components.utils.import("resource://myext/pathparser.js", MyExtension);
+var router = new MyExtension.PathParser;
+```
