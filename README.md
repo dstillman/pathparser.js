@@ -1,15 +1,37 @@
 ## About
 
-pathparser.js is a tiny, simple-to-use JavaScript URL parser/router with no dependencies. It supports optional named parameters, query string parameter parsing, and automatic parameter assignment.
+pathparser.js is a tiny, simple-to-use JavaScript URL parser/router with no dependencies. It supports optional named parameters, query string parameter parsing, and automatic parameter assignment:
+
+### Example
+
+```javascript
+var params = { format: 'html' };
+var router = new PathParser(params);
+router.add('users/:userID', function () {
+    params.controller = 'users';
+});
+router.add('groups/:groupID', function () {
+    params.controller = 'groups';
+});
+
+router.run('users/12345?format=json');
+// params.controller == 'users'
+// params.userID == 12345
+// params.format == 'json'
+```
+
 
 ## Usage
 
-### Basic Example
+### Fixed paths
 
 ```javascript
 var router = new PathParser;
 router.add('users', function () {
     document.title = 'Users';
+});
+router.add('users/new', function () {
+    document.title = 'New Users';
 });
 router.add('groups', function () {
     document.title = 'Groups';
@@ -18,8 +40,6 @@ router.add('groups', function () {
 router.run('users');
 // document.title is now 'Users'
 ```
-
-```run()``` takes a relative URL, with or without a leading slash.
 
 ### Optional named parameters
 
