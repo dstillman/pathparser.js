@@ -2,8 +2,6 @@
 
 pathparser.js is a tiny, simple-to-use JavaScript URL parser/router with no dependencies. It supports optional named parameters, query string parameter parsing, and automatic parameter assignment:
 
-### Example
-
 ```javascript
 var params = { format: 'html' };
 var router = new PathParser(params);
