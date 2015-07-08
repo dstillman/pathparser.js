@@ -173,13 +173,26 @@ router.run('collections/1/items/2?limit=10');
 // }
 ```
 
-## Module support
+## Installation
 
 ### Node
 
+```
+npm install pathparser
+```
+
 ```javascript
-var PathParser = require('./pathparser.js');
+var PathParser = require('pathparser');
 var router = new PathParser;
+```
+
+### Browser
+
+```html
+<script src="pathparser.min.js"></script>
+<script>
+var router = new PathParser;
+</script>
 ```
 
 ### Mozilla JSM
