@@ -33,10 +33,15 @@
             var params = {};
             var missingParams = {};
             
+            
+            
             // Parse path components
             for (var i = 0; i < rule.parts.length; i++) {
                 var rulePart = rule.parts[i];
                 var part = pathParts[i];
+                
+                if (rulePart == undefined) return false; 
+                if (part == undefined) return false; 
                 
                 if (part !== undefined) {
                     // Assign part to named parameter
