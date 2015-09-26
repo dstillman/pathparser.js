@@ -45,6 +45,14 @@ test("Multi-part fixed path", function () {
     router.run('items');
 });
 
+test("Don't match fixed path against incomplete fixed rule", function () {
+    var router = new PathParser;
+    router.add('items', function () {
+        throw new Error("Incorrect match");
+    });
+    notOk(router.run('items/top'));
+});
+
 test("Ignore leading slash in URL", function () {
     expect(1);
     var router = new PathParser;
