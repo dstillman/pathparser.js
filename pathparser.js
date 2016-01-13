@@ -1,7 +1,7 @@
 /**
  * pathparser.js - tiny URL parser/router
  *
- * Copyright (c) 2014 Dan Stillman
+ * Copyright (c) 2014-2016 Dan Stillman
  * License: MIT
  * https://github.com/dstillman/pathparser.js
  */
