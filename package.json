@@ -1,0 +1,25 @@
+{
+  "name": "pathparser",
+  "version": "1.0.0",
+  "description": "Tiny, flexible JavaScript URL parser / router with no dependencies",
+  "main": "pathparser",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "dstillman/pathparser.js"
+  },
+  "keywords": [
+    "url",
+    "parser",
+    "pathparser",
+    "router"
+  ],
+  "author": "Dan Stillman <dan@danstillman.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dstillman/pathparser.js/issues"
+  },
+  "homepage": "https://github.com/dstillman/pathparser.js#readme"
+}
