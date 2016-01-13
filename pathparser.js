@@ -33,6 +33,9 @@
             var params = {};
             var missingParams = {};
             
+            // Don't match if fixed rule is longer than path
+            if (rule.parts.length < pathParts.length) return false;
+            
             // Parse path components
             for (var i = 0; i < rule.parts.length; i++) {
                 var rulePart = rule.parts[i];

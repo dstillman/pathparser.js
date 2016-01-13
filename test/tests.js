@@ -45,7 +45,7 @@ test("Multi-part fixed path", function () {
     router.run('items');
 });
 
-test("Don't match fixed path against incomplete fixed rule", function () {
+test("Don't match fixed path with additional parts", function () {
     var router = new PathParser;
     router.add('items', function () {
         throw new Error("Incorrect match");
