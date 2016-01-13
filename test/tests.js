@@ -1,8 +1,7 @@
 test("run() boolean for match found", function () {
     expect(1);
     var router = new PathParser;
-    router.add('items', function () {
-    });
+    router.add('items', function () {});
     router.add('itemsnomatch', function () {
         throw "Incorrect match";
     });
@@ -18,23 +17,8 @@ test("run() boolean for no match found", function () {
 test("Single-part fixed path", function () {
     expect(1);
     var router = new PathParser;
-    router.add('items', function () {
-        ok(true);
-    });
-    router.add('itemsnomatch', function () {
-        throw "Incorrect match";
-    });
-    router.run('items');
-});
-
-test("Multi-part fixed path", function () {
-    expect(1);
-    var router = new PathParser;
     router.add('items/top', function () {
         throw "Incorrect match";
-    });
-    router.add('items', function () {
-        ok(true);
     });
     router.add('itemsnomatch', function () {
         throw "Incorrect match";
@@ -42,7 +26,25 @@ test("Multi-part fixed path", function () {
     router.add('item', function () {
         throw "Incorrect match";
     });
+    router.add('items', function () {
+        ok(true);
+    });
     router.run('items');
+});
+
+test("Multi-part fixed path", function () {
+    expect(1);
+    var router = new PathParser;
+    router.add('items', function () {
+        throw "Incorrect match";
+    });
+    router.add('itemsnomatch', function () {
+        throw "Incorrect match";
+    });
+    router.add('items/top', function () {
+        ok(true);
+    });
+    router.run('items/top');
 });
 
 test("Don't match fixed path with additional parts", function () {
