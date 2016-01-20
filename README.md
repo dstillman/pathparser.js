@@ -186,6 +186,12 @@ var PathParser = require('pathparser');
 var router = new PathParser;
 ```
 
+### Bower
+
+```
+bower install pathparser
+```
+
 ### Browser
 
 ```html
