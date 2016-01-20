@@ -1,0 +1,26 @@
+{
+  "name": "pathparser",
+  "description": "Tiny, flexible JavaScript URL parser / router with no dependencies",
+  "main": "pathparser.js",
+  "authors": [
+    "Dan Stillman <dan@danstillman.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "url",
+    "parser",
+    "pathparser",
+    "router"
+  ],
+  "homepage": "https://github.com/dstillman/pathparser.js",
+  "moduleType": [
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
