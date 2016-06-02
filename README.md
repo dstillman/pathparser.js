@@ -12,7 +12,7 @@ router.add('groups/:groupID', function () {
     params.controller = 'groups';
 });
 
-router.run('users/12345?format=json');
+router.run('/users/12345?format=json');
 // params.controller == 'users'
 // params.userID == 12345
 // params.format == 'json'
@@ -35,7 +35,7 @@ router.add('groups', function () {
     document.title = 'Groups';
 });
 
-router.run('users');
+router.run('users'); // leading slash is optional in rules and path
 // document.title is now 'Users'
 ```
 
