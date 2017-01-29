@@ -37,7 +37,8 @@
             if (rule.parts.length < pathParts.length) return false;
             
             // Parse path components
-            for (var i = 0; i < rule.parts.length; i++) {
+            var length = pathParts.length>rule.parts.length?pathParts.length:rule.parts.length;
+            for (var i = 0; i < length; i++) {
                 var rulePart = rule.parts[i];
                 var part = pathParts[i];
                 
